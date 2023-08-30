@@ -1,0 +1,33 @@
+schema-version: v1
+kind: manifest
+metadata:
+  name: app-test
+  description: esta aplicação é um teste
+  starter: rmb-studio/teste-stack-1/teste-starter
+  stack-version-id: 01H93YX5XQMGNZ70PGXB0QE6W3
+  stack: teste-stack-1
+spec:
+  type: app
+  app-id: 01H93ZCZKQ2TCX5AGGPHSFGTDB
+  plugins:
+    - name: rmb-studio/teste-stack-1/base-html-plugin@0.0.1
+      plugin-version-id: 01H8C5NSN0QATK8XYN4Y8HC9X5
+      stack-version-id: 01H93YX5XQMGNZ70PGXB0QE6W3
+      type: app
+      inputs:
+        title: Training - StackSpot
+      inputs-envs: {}
+      connectors: []
+    - name: rmb-studio/teste-stack-1/dummy-json-plugin@0.0.1
+      plugin-version-id: 01H8C5SVGX1CMAECT6JD1PGFEK
+      stack-version-id: 01H93YX5XQMGNZ70PGXB0QE6W3
+      type: app
+      inputs:
+        table_id: product-list
+        column_list: ID;TITLE;DESCRIPTION
+        attr_list: id;title;description
+      inputs-envs: {}
+      connectors: []
+  global-inputs: {}
+  global-computed-inputs: {}
+  repository: https://github.com/rafaelambarreto/teste
